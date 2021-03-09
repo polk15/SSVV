@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e552032-895b-49ab-bce9-b21032610ec6" name="Default Changelist" comment="" />
+    <list default="true" id="1e552032-895b-49ab-bce9-b21032610ec6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/XMLFileRepository/AbstractXMLRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/XMLFileRepository/AbstractXMLRepo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615302703670</updated>
-      <workItem from="1615302707343" duration="1258000" />
+      <workItem from="1615302707343" duration="1517000" />
     </task>
     <servers />
   </component>
