@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e552032-895b-49ab-bce9-b21032610ec6" name="Default Changelist" comment="">
+    <list default="true" id="1e552032-895b-49ab-bce9-b21032610ec6" name="Default Changelist" comment="Take home lab 2 - initial round of tests - 4 failing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/XMLFileRepository/AbstractXMLRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/XMLFileRepository/AbstractXMLRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +44,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
@@ -53,8 +55,8 @@
       <recent name="F:\Google Drive\INFO\An 3 sem 2\SSVV - Software Systems Verification and Validation\Laboratories\Lab_2 9 mar. 2021\lab2\src\main\java\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="AppTest.TC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AppTest">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab2" />
       <extension name="coverage">
         <pattern>
@@ -64,7 +66,70 @@
       </extension>
       <option name="PACKAGE_NAME" value="ssvv.example" />
       <option name="MAIN_CLASS_NAME" value="ssvv.example.AppTest" />
-      <option name="METHOD_NAME" value="TC1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.TC10_EC15_invalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.AppTest" />
+      <option name="METHOD_NAME" value="TC10_EC15_invalid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.TC6_EC9_invalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.AppTest" />
+      <option name="METHOD_NAME" value="TC6_EC9_invalid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.TC8_EC13_invalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.AppTest" />
+      <option name="METHOD_NAME" value="TC8_EC13_invalid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.TC9_EC14_valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.AppTest" />
+      <option name="METHOD_NAME" value="TC9_EC14_valid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,7 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.TC1" />
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.TC10_EC15_invalid" />
+        <item itemvalue="JUnit.AppTest.TC9_EC14_valid" />
+        <item itemvalue="JUnit.AppTest.TC8_EC13_invalid" />
+        <item itemvalue="JUnit.AppTest.TC6_EC9_invalid" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +155,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615302703670</updated>
-      <workItem from="1615302707343" duration="2436000" />
+      <workItem from="1615302707343" duration="3276000" />
+      <workItem from="1616446315601" duration="7664000" />
     </task>
     <task id="LOCAL-00001" summary="E instead of var">
       <created>1615304263385</created>
@@ -102,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615304834521</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="TCE1 added">
+      <created>1615305178370</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615305178370</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,20 +188,47 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="E instead of var" />
     <MESSAGE value="TC1 modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="TC1 modified" />
+    <MESSAGE value="TCE1 added" />
+    <MESSAGE value="Take home lab 2 - initial round of tests - 4 failing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Take home lab 2 - initial round of tests - 4 failing" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="209" y="26" key="CommitChangelistDialog2" timestamp="1615304833249">
+    <state x="209" y="26" key="CommitChangelistDialog2" timestamp="1616455592300">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="209" y="26" key="CommitChangelistDialog2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1615304833249" />
+    <state x="209" y="26" key="CommitChangelistDialog2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1615305176838" />
+    <state x="209" y="26" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1616455592300" />
+    <state x="147" y="68" key="DiffContextDialog" timestamp="1616455564499">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="147" y="68" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1616455564499" />
+    <state width="1537" height="231" key="GridCell.Tab.0.bottom" timestamp="1616455516949">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1537" height="231" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616455516949" />
+    <state width="1537" height="231" key="GridCell.Tab.0.center" timestamp="1616455516949">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1537" height="231" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616455516949" />
+    <state width="1537" height="231" key="GridCell.Tab.0.left" timestamp="1616455516949">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1537" height="231" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616455516949" />
+    <state width="1537" height="231" key="GridCell.Tab.0.right" timestamp="1616455516949">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1537" height="231" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616455516949" />
     <state x="277" y="74" key="SettingsEditor" timestamp="1615302817205">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="74" key="SettingsEditor/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1615302817205" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1615304835985">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1615305179732">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1615304835985" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1615305179732" />
+    <state x="463" y="164" width="609" height="536" key="find.popup" timestamp="1616450763648">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="463" y="164" width="609" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1616450763648" />
   </component>
 </project>

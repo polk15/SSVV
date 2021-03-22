@@ -41,7 +41,6 @@ public abstract class AbstractXMLRepo<ID,E extends HasId<ID>> extends AbstractCr
                     .newInstance()
                     .newDocumentBuilder()
                     .parse(this.fileName);
-
             Element root=document.getDocumentElement();
             NodeList children=root.getChildNodes();
             for(int i=0;i<children.getLength();i++){
