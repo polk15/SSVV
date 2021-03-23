@@ -37,7 +37,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC_WBT_1() throws ValidatorException {
+    public void tc1_wbt() throws ValidatorException {
         String id = "1", description = "descr1", saptLimita = "1", saptPredarii = "2";
         String[] params = {id, description, saptLimita, saptPredarii};
         temaLabXMLService.add(params);
@@ -45,7 +45,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC_WBT_2() throws ValidatorException {
+    public void tc2_wbt() throws ValidatorException {
         String sameId = "1";
         temaLabXMLService.add(new String[]{sameId, "descr1", "1", "2"});
         assertNotNull(temaLabXMLService.findOne(Integer.parseInt(sameId)));
@@ -53,7 +53,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC1_EC_1_3_6_8_10_12_valid() throws ValidatorException {
+    public void tc1_bbt() throws ValidatorException {
         String id = "1", nume = "name1", grupa = "934", email = "email1@gmail.com", tutor = "tutor1";
         String[] params = {id, nume, grupa, email, tutor};
         studentXMLService.add(params);
@@ -75,49 +75,49 @@ public class AppTest {
     }
 
     @Test
-    public void TC2_EC2_invalid() {
+    public void tc2_bbt() {
         String[] params = new String[]{"1", "name1", "string", "email1@gmail.com", "tutor1"};
         assertThrows(ValidatorException.class, () -> studentXMLService.add(params));
     }
 
     @Test
-    public void TC3_EC4_BVA1_invalid() {
+    public void tc3_bbt() {
         String[] params = new String[]{"1", "name1", "99", "email1@gmail.com", "tutor1"};
         assertThrows(ValidatorException.class, () -> studentXMLService.add(params));
     }
 
     @Test
-    public void TC4_EC5_BVA6_invalid() {
+    public void tc4_bbt() {
         String[] params = new String[]{"1", "name1", "1000", "email1@gmail.com", "tutor1"};
         assertThrows(ValidatorException.class, () -> studentXMLService.add(params));
     }
 
     @Test
-    public void TC5_EC7_invalid() {
+    public void tc5_bbt() {
         String[] params = new String[]{"1", "name1", "934", "@.", "tutor1"};
         assertThrows(ValidatorException.class, () -> studentXMLService.add(params));
     }
 
     @Test
-    public void TC6_EC9_invalid() {
+    public void tc6_bbt() {
         String[] params = new String[]{"", "name1", "934", "email1@gmail.com", "tutor1"};
         assertThrows(ValidatorException.class, () -> studentXMLService.add(params));
     }
 
     @Test
-    public void TC7_EC11_invalid() {
+    public void tc7_bbt() {
         String[] params = new String[]{"1", "", "string", "email1@gmail.com", "tutor1"};
         assertThrows(ValidatorException.class, () -> studentXMLService.add(params));
     }
 
     @Test
-    public void TC8_EC13_invalid() {
+    public void tc8_bbt() {
         String[] params = new String[]{"1", "name1", "string", "email1@gmail.com", ""};
         assertThrows(ValidatorException.class, () -> studentXMLService.add(params));
     }
 
     @Test
-    public void TC9_EC14_valid() throws ValidatorException {
+    public void tc9_bbt() throws ValidatorException {
         String[] params1 = new String[]{"1", "name1", "934", "email1@gmail.com", "tutor1"};
         String[] params2 = new String[]{"2", "name1", "934", "email1@gmail.com", "tutor1"};
         studentXMLService.add(params1);
@@ -130,7 +130,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC10_EC15_invalid() throws ValidatorException {
+    public void tc10_bbt() throws ValidatorException {
         String[] params1 = new String[]{"1", "name1", "934", "email1@gmail.com", "tutor1"};
         String[] params2 = new String[]{"1", "name1", "934", "email1@gmail.com", "tutor1"};
         studentXMLService.add(params1);
@@ -138,7 +138,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC11_BVA_2_valid() throws ValidatorException {
+    public void tc11_bbt() throws ValidatorException {
         String[] params = new String[]{"1", "name1", "100", "email1@gmail.com", ""};
         studentXMLService.add(params);
         Student student = studentXMLService.findOne("1");
@@ -146,7 +146,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC12_BVA_3_valid() throws ValidatorException {
+    public void tc12_bbt() throws ValidatorException {
         String[] params = new String[]{"1", "name1", "101", "email1@gmail.com", ""};
         studentXMLService.add(params);
         Student student = studentXMLService.findOne("1");
@@ -154,7 +154,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC13_BVA_4_valid() throws ValidatorException {
+    public void tc13_bbt() throws ValidatorException {
         String[] params = new String[]{"1", "name1", "998", "email1@gmail.com", ""};
         studentXMLService.add(params);
         Student student = studentXMLService.findOne("1");
@@ -162,7 +162,7 @@ public class AppTest {
     }
 
     @Test
-    public void TC14_BVA_5_valid() throws ValidatorException {
+    public void tc14_bbt() throws ValidatorException {
         String[] params = new String[]{"1", "name1", "999", "email1@gmail.com", ""};
         studentXMLService.add(params);
         Student student = studentXMLService.findOne("1");
