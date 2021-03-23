@@ -1,12 +1,16 @@
 package ssvv.example;
 
 import Domain.Student;
+import Domain.TemaLab;
 import Exceptions.ServiceException;
 import Exceptions.ValidatorException;
 import Repository.XMLFileRepository.StudentXMLRepo;
+import Repository.XMLFileRepository.TemaLabXMLRepo;
 import Service.TxtFileService.StudentService;
 import Service.XMLFileService.StudentXMLService;
+import Service.XMLFileService.TemaLabXMLService;
 import Validator.StudentValidator;
+import Validator.TemaLabValidator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,13 +23,33 @@ import static org.junit.Assert.*;
 
 public class AppTest {
     private StudentXMLService studentXMLService;
+    private TemaLabXMLService temaLabXMLService;
     private final String EMAIL_REGEX = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
 
     @Before
     public void setup() {
         StudentValidator studentValidator = new StudentValidator();
+        TemaLabValidator temaLabValidator = new TemaLabValidator();
         StudentXMLRepo studentXMLRepo = new StudentXMLRepo(studentValidator, "student-test.xml");
+        TemaLabXMLRepo temaLabXMLRepo = new TemaLabXMLRepo(temaLabValidator,"tema-lab-test.xml");
         studentXMLService = new StudentXMLService(studentXMLRepo);
+        temaLabXMLService = new TemaLabXMLService(temaLabXMLRepo);
+    }
+
+    @Test
+    public void TC_WBT_1() throws ValidatorException {
+        String id = "1", description = "descr1", saptLimita = "1", saptPredarii = "2";
+        String[] params = {id, description, saptLimita, saptPredarii};
+        temaLabXMLService.add(params);
+        assertNotNull(temaLabXMLService.findOne(Integer.parseInt(id)));
+    }
+
+    @Test
+    public void TC_WBT_2() throws ValidatorException {
+        String sameId = "1";
+        temaLabXMLService.add(new String[]{sameId, "descr1", "1", "2"});
+        assertNotNull(temaLabXMLService.findOne(Integer.parseInt(sameId)));
+        assertThrows(ServiceException.class, () -> temaLabXMLService.add(new String[]{sameId, "descr2", "2", "3"}));
     }
 
     @Test
