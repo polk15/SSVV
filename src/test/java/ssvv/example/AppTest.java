@@ -6,12 +6,10 @@ import Exceptions.ServiceException;
 import Exceptions.ValidatorException;
 import Repository.XMLFileRepository.StudentXMLRepo;
 import Repository.XMLFileRepository.TemaLabXMLRepo;
-import Service.TxtFileService.StudentService;
 import Service.XMLFileService.StudentXMLService;
 import Service.XMLFileService.TemaLabXMLService;
 import Validator.StudentValidator;
 import Validator.TemaLabValidator;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,6 +22,7 @@ import static org.junit.Assert.*;
 public class AppTest {
     private StudentXMLService studentXMLService;
     private TemaLabXMLService temaLabXMLService;
+    private TemaLabXMLRepo temaLabXMLRepo;
     private final String EMAIL_REGEX = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
 
     @Before
@@ -31,7 +30,7 @@ public class AppTest {
         StudentValidator studentValidator = new StudentValidator();
         TemaLabValidator temaLabValidator = new TemaLabValidator();
         StudentXMLRepo studentXMLRepo = new StudentXMLRepo(studentValidator, "student-test.xml");
-        TemaLabXMLRepo temaLabXMLRepo = new TemaLabXMLRepo(temaLabValidator,"tema-lab-test.xml");
+        temaLabXMLRepo = new TemaLabXMLRepo(temaLabValidator, "tema-lab-test.xml");
         studentXMLService = new StudentXMLService(studentXMLRepo);
         temaLabXMLService = new TemaLabXMLService(temaLabXMLRepo);
     }
@@ -50,6 +49,61 @@ public class AppTest {
         temaLabXMLService.add(new String[]{sameId, "descr1", "1", "2"});
         assertNotNull(temaLabXMLService.findOne(Integer.parseInt(sameId)));
         assertThrows(ServiceException.class, () -> temaLabXMLService.add(new String[]{sameId, "descr2", "2", "3"}));
+    }
+
+    @Test
+    public void tc3_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(1,  "desc", 1, 2);
+        temaLabXMLRepo.save(temaLab);
+        assertNotNull(temaLabXMLService.findOne(1));
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc4_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(Integer.parseInt(null),  "desc", 1, 2);
+        temaLabXMLRepo.save(temaLab);
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc5_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(Integer.parseInt(""),  "desc", 1, 2);
+        temaLabXMLRepo.save(temaLab);
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc6_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(1,  null, 1, 2);
+        temaLabXMLRepo.save(temaLab);
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc7_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(1,  "", 1, 2);
+        temaLabXMLRepo.save(temaLab);
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc8_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(1,  "desc", 0, 2);
+        temaLabXMLRepo.save(temaLab);
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc9_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(1,  "desc", 15, 2);
+        temaLabXMLRepo.save(temaLab);
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc10_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(1,  "desc", 1, 0);
+        temaLabXMLRepo.save(temaLab);
+    }
+
+    @Test(expected = ValidatorException.class)
+    public void tc11_wbt() throws ValidatorException {
+        TemaLab temaLab = new TemaLab(1,  "desc", 1, 15);
+        temaLabXMLRepo.save(temaLab);
     }
 
     @Test
