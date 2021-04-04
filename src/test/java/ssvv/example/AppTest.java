@@ -60,13 +60,7 @@ public class AppTest {
 
     @Test(expected = ValidatorException.class)
     public void tc4_wbt() throws ValidatorException {
-        TemaLab temaLab = new TemaLab(Integer.parseInt(null),  "desc", 1, 2);
-        temaLabXMLRepo.save(temaLab);
-    }
-
-    @Test(expected = ValidatorException.class)
-    public void tc5_wbt() throws ValidatorException {
-        TemaLab temaLab = new TemaLab(Integer.parseInt(""),  "desc", 1, 2);
+        TemaLab temaLab = new TemaLab(null,  "desc", 1, 2);
         temaLabXMLRepo.save(temaLab);
     }
 
