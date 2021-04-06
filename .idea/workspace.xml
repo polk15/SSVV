@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e552032-895b-49ab-bce9-b21032610ec6" name="Default Changelist" comment="removed a test + corrected code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Domain/TemaLab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Domain/TemaLab.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Repository/TxtFileRepository/TemaLabFileRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/TxtFileRepository/TemaLabFileRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Validator/TemaLabValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Validator/TemaLabValidator.class" afterDir="false" />
@@ -160,7 +159,7 @@
       <workItem from="1615302707343" duration="3276000" />
       <workItem from="1616446315601" duration="11696000" />
       <workItem from="1617560906114" duration="8463000" />
-      <workItem from="1617714489852" duration="3538000" />
+      <workItem from="1617714489852" duration="3884000" />
     </task>
     <task id="LOCAL-00001" summary="E instead of var">
       <created>1615304263385</created>
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617568998982</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added Lab4 in-lab assignment - integration testing">
+      <created>1617718399655</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617718399655</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,47 +247,48 @@
     <MESSAGE value="shortened tests names" />
     <MESSAGE value="Lab 3 WBT - take home" />
     <MESSAGE value="removed a test + corrected code" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed a test + corrected code" />
+    <MESSAGE value="Added Lab4 in-lab assignment - integration testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Lab4 in-lab assignment - integration testing" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="209" y="26" key="CommitChangelistDialog2" timestamp="1617716725677">
+    <state x="209" y="26" key="CommitChangelistDialog2" timestamp="1617718397771">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="209" y="26" key="CommitChangelistDialog2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617716725677" />
+    <state x="209" y="26" key="CommitChangelistDialog2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718397771" />
     <state x="209" y="26" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1616456940148" />
     <state x="147" y="68" key="DiffContextDialog" timestamp="1617716713531">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="147" y="68" key="DiffContextDialog/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617716713531" />
     <state x="147" y="68" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1616455564499" />
-    <state width="1537" height="231" key="GridCell.Tab.0.bottom" timestamp="1617718353666">
+    <state width="1537" height="231" key="GridCell.Tab.0.bottom" timestamp="1617718694208">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1537" height="231" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718353666" />
+    <state width="1537" height="231" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718694208" />
     <state width="1537" height="231" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616456930351" />
-    <state width="1537" height="231" key="GridCell.Tab.0.center" timestamp="1617718353666">
+    <state width="1537" height="231" key="GridCell.Tab.0.center" timestamp="1617718694207">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1537" height="231" key="GridCell.Tab.0.center/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718353666" />
+    <state width="1537" height="231" key="GridCell.Tab.0.center/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718694207" />
     <state width="1537" height="231" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616456930351" />
-    <state width="1537" height="231" key="GridCell.Tab.0.left" timestamp="1617718353665">
+    <state width="1537" height="231" key="GridCell.Tab.0.left" timestamp="1617718694207">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1537" height="231" key="GridCell.Tab.0.left/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718353665" />
+    <state width="1537" height="231" key="GridCell.Tab.0.left/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718694207" />
     <state width="1537" height="231" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616456930351" />
-    <state width="1537" height="231" key="GridCell.Tab.0.right" timestamp="1617718353666">
+    <state width="1537" height="231" key="GridCell.Tab.0.right" timestamp="1617718694208">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1537" height="231" key="GridCell.Tab.0.right/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718353666" />
+    <state width="1537" height="231" key="GridCell.Tab.0.right/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718694208" />
     <state width="1537" height="231" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616456930351" />
     <state x="277" y="74" key="SettingsEditor" timestamp="1617716407075">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="74" key="SettingsEditor/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617716407075" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1617569006860">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1617718422369">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617569006860" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.24.1680.1050@0.0.1536.864" timestamp="1617718422369" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616456944294" />
     <state x="465" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1617714497844">
       <screen x="0" y="0" width="1536" height="864" />
