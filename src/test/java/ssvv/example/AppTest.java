@@ -4,10 +4,14 @@ import Domain.Student;
 import Domain.TemaLab;
 import Exceptions.ServiceException;
 import Exceptions.ValidatorException;
+import Repository.XMLFileRepository.NotaXMLRepo;
 import Repository.XMLFileRepository.StudentXMLRepo;
 import Repository.XMLFileRepository.TemaLabXMLRepo;
+import Service.TxtFileService.NotaService;
+import Service.XMLFileService.NotaXMLService;
 import Service.XMLFileService.StudentXMLService;
 import Service.XMLFileService.TemaLabXMLService;
+import Validator.NotaValidator;
 import Validator.StudentValidator;
 import Validator.TemaLabValidator;
 import org.junit.Before;
@@ -22,6 +26,7 @@ import static org.junit.Assert.*;
 public class AppTest {
     private StudentXMLService studentXMLService;
     private TemaLabXMLService temaLabXMLService;
+    private NotaXMLService notaXMLService;
     private TemaLabXMLRepo temaLabXMLRepo;
     private final String EMAIL_REGEX = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
 
@@ -29,10 +34,61 @@ public class AppTest {
     public void setup() {
         StudentValidator studentValidator = new StudentValidator();
         TemaLabValidator temaLabValidator = new TemaLabValidator();
+        NotaValidator notaValidator = new NotaValidator();
         StudentXMLRepo studentXMLRepo = new StudentXMLRepo(studentValidator, "student-test.xml");
+        NotaXMLRepo notaXMLRepo = new NotaXMLRepo(notaValidator, "nota-test.xml");
         temaLabXMLRepo = new TemaLabXMLRepo(temaLabValidator, "tema-lab-test.xml");
         studentXMLService = new StudentXMLService(studentXMLRepo);
         temaLabXMLService = new TemaLabXMLService(temaLabXMLRepo);
+        notaXMLService = new NotaXMLService(notaXMLRepo);
+    }
+
+    @Test
+    public void tc_int_big_bang() throws ValidatorException {
+        // Integration testing - big bang approach
+
+        String idStudent = "1", nume = "name1", grupa = "934", email = "email1@gmail.com", tutor = "tutor1";
+        String idTema = "1", description = "descr1", saptLimita = "1", saptPredarii = "2";
+        String idNota= "1", value = "10", data = "2020-10-10T10:10:10";
+
+        String[] paramsStudent = {idStudent, nume, grupa, email, tutor};
+        String[] paramsTema = {idTema, description, saptLimita, saptPredarii};
+        String[] paramsNota = {idNota, idStudent, idTema, value, data};
+
+        studentXMLService.add(paramsStudent);
+        temaLabXMLService.add(paramsTema);
+        notaXMLService.add(paramsNota);
+
+        assertNotNull(studentXMLService.findOne(idStudent));
+        assertNotNull(temaLabXMLService.findOne(Integer.parseInt(idTema)));
+        assertNotNull(notaXMLService.findOne(Integer.parseInt(idNota)));
+    }
+
+    @Test
+    public void tc1_int_wbt() throws ValidatorException {
+        // Add student
+        String id = "1", nume = "name1", grupa = "934", email = "email1@gmail.com", tutor = "tutor1";
+        String[] params = {id, nume, grupa, email, tutor};
+        studentXMLService.add(params);
+        assertNotNull(studentXMLService.findOne(id));
+    }
+
+    @Test
+    public void tc2_int_wbt() throws ValidatorException {
+        // Add assignment
+        String id = "1", description = "descr1", saptLimita = "1", saptPredarii = "2";
+        String[] params = {id, description, saptLimita, saptPredarii};
+        temaLabXMLService.add(params);
+        assertNotNull(temaLabXMLService.findOne(Integer.parseInt(id)));
+    }
+
+    @Test
+    public void tc3_int_wbt() throws ValidatorException {
+        // Add grade
+        String id = "1", idStudent = "1", idTema = "1", value = "10", data = "2020-10-10T10:10:10";
+        String[] params = {id, idStudent, idTema, value, data};
+        notaXMLService.add(params);
+        assertNotNull(notaXMLService.findOne(Integer.parseInt(id)));
     }
 
     @Test
