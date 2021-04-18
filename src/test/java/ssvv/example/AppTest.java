@@ -44,6 +44,36 @@ public class AppTest {
     }
 
     @Test
+    public void tc1_int_top_down() throws ValidatorException {
+        // Integration testing - add Student + add Assignment
+
+        tc1_int_wbt(); // Add student test case
+
+        String idTema = "1", description = "descr1", saptLimita = "1", saptPredarii = "2";
+
+        String[] paramsTema = {idTema, description, saptLimita, saptPredarii};
+        temaLabXMLService.add(paramsTema);
+
+        assertNotNull(temaLabXMLService.findOne(Integer.parseInt(idTema)));
+    }
+
+    @Test
+    public void tc2_int_top_down() throws ValidatorException {
+        // Integration testing - add Student + add Assignment + add Grade
+
+        tc1_int_top_down(); // add Student + add Assignment integration test
+
+        String idNota= "1", value = "10", data = "2020-10-10T10:10:10";
+        String idStudent = "1";
+        String idTema = "1";
+
+        String[] paramsNota = {idNota, idStudent, idTema, value, data};
+        notaXMLService.add(paramsNota);
+
+        assertNotNull(notaXMLService.findOne(Integer.parseInt(idNota))); // Add Grade test
+    }
+
+    @Test
     public void tc_int_big_bang() throws ValidatorException {
         // Integration testing - big bang approach
 
